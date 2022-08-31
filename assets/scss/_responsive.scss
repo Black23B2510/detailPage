@@ -1,0 +1,9 @@
+@media only screen and (max-width: 1020px) {
+    header{
+        .main-nav{
+            &__list{
+                column-gap: 28px;
+            }
+        }
+    }
+}

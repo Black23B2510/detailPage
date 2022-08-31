@@ -1,0 +1,110 @@
+//color
+$bgd-color: #F5F5F5;
+$bgd-nav: #00344C;
+$bgd-accessories: #FAFAFA;
+$bgd-collections: #F2F2F2;
+$bgd-footer:#B69046;
+$txt-color:#001A31;
+$price-color:#525252;
+$btn-color:#CB9D37;
+$ft-txt: #FFFFFF;
+// font-family
+$ff-archivo: 'Archivo', sans-serif;
+$ff-poppins: 'Poppins', sans-serif;
+$ff-roboto: 'Roboto Condensed', sans-serif;
+$ff-sanspro: 'Source Sans Pro', sans-serif;
+
+//CSS variable
+:root{
+    //font-size
+    --fz-title: 36px;
+    --fz-main: 24px;
+    --fz-brand: 20px
+    --fz-name: 18px;
+    --fz-text: 16px;
+    --fz-filter: 15px;
+    --fz-navbar: 14px;
+    --fz-ft: 12px;
+    //line-height
+    --lh-nav: 22px;
+    --lh-title: 130%;
+    --lh-ft: 120%;
+    --lh-price: 27px;
+    --lh-txt: 24px;
+    --lh-btn: 21px;
+    --lh-qty: 15px;
+    --lh-add: 18px;
+    --lh-brand :42px;
+    //font-weight
+    --fw-title: 700;
+    --fw-nav: 600;
+    --fw-main: 400;
+    --fw-brand: 300;
+    //letter-spacing
+    --lt-1: 0.05em;
+    --lt-2: 0.025em;
+}
+
+@media only screen and (max-width: 1200px) {
+    :root{
+        //font-size
+        --fz-title: 34px;
+        --fz-main: 22px;
+        --fz-brand: 18px
+        --fz-name: 16px;
+        --fz-text: 14px;
+        --fz-filter: 13px;
+        --fz-navbar: 12px;
+        --fz-ft: 10px;
+        //line-height
+        --lh-nav: 20px;
+        --lh-title: 110%;
+        --lh-ft: 100%;
+        --lh-price: 25px;
+        --lh-txt: 22px;
+        --lh-btn: 19px;
+        --lh-qty: 13px;
+        --lh-add: 16px;
+        --lh-brand :40px;
+        //font-weight
+        --fw-title: 700;
+        --fw-nav: 600;
+        --fw-main: 400;
+        --fw-brand: 300;
+        //letter-spacing
+        --lt-1: 0.05em;
+        --lt-2: 0.025em;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    :root{
+        //font-size
+        --fz-title: 32px;
+        --fz-main: 20px;
+        --fz-brand: 16px
+        --fz-name: 14px;
+        --fz-text: 12px;
+        --fz-filter: 11px;
+        --fz-navbar: 10px;
+        --fz-ft: 8px;
+        //line-height
+        --lh-nav: 18px;
+        --lh-title: 90%;
+        --lh-ft: 80%;
+        --lh-price: 23px;
+        --lh-txt: 20px;
+        --lh-btn: 17px;
+        --lh-qty: 11px;
+        --lh-add: 14px;
+        --lh-brand :38px;
+        //font-weight
+        --fw-title: 700;
+        --fw-nav: 600;
+        --fw-main: 400;
+        --fw-brand: 300;
+        //letter-spacing
+        --lt-1: 0.05em;
+        --lt-2: 0.025em;
+    }
+}

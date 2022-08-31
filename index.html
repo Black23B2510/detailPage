@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/app.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Poppins:ital,wght@0,400;0,600;0,700;1,300&family=Roboto+Condensed:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>Phone store</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header >
+                <div class="container" >
+                    <div class="main-nav">
+                        <div class="main-nav__logo">
+                            <img src="./assets/images/logo.png" alt="">
+                        </div>
+                        <nav class="main-nav__bar">
+                            <ul class="main-nav__list">
+                                <li class="main-nav__item"><a
+                                        class="main-nav__link" href="">About us</a></li>
+                                <li class="main-nav__item"><a
+                                        class="main-nav__link" href="">Brands</a></li>
+                                <li class="main-nav__item"><a
+                                        class="main-nav__link" href="">News</a></li>
+                                <li class="main-nav__item"><a
+                                        class="main-nav__link" href="">Dealer</a></li>
+                                <li class="main-nav__item"><a
+                                        class="main-nav__link" href="">Customer Services</a></li>
+                                <li class="main-nav__item devide">
+                                    <a class="main-nav__link" href="">Contact Us</a>
+                                </li>
+                                <li class="main-nav__item">
+                                    <a class="main-nav__cart" href="">My cart</a>
+                                    <span class="main-nav__cart--qty">3</span>
+                                </li>
+                                <li class="main-nav__item"><a class="main-nav__lang" href="">
+                                    <img src="./assets/images/England.png" alt="">
+                                    <i class="fa fa-chevron-down main-nav__lang--icon" aria-hidden="true"></i>
+                                </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main__wrapper">
+                    <section class="main-products main-products__wrapper">
+                        <div class="main-products__slider">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="./assets/images/first-slide.png" />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div thumbsSlider="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/first.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/second.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/third.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/fourth.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/fifth.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/sixth.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-products__desc">
+                            <h1 class="main-products__name">XOR Titanium Collection</h1>
+                            <p class="main-products__price">đ 99,000,000</p>
+                            <div class="main-products__filter">
+                                <button class="main-products__btn active"> Classic</button>
+                                <button class="main-products__btn">Ebony</button>
+                                <button class="main-products__btn">Rose</button>
+                            </div>
+                            <div class="main-products__qty">
+                                <label for="qty">Quantity</label>
+                                <div class="main-products__qty--numbers">
+                                    <input onclick="minusQuantity('0')" type="button" value="-" min="" id="btn-incre" name="btn-incre" class="btn-incre">
+                                    <input type="text" value="01" name="qty" id="qty" class="qty" min="01">
+                                    <input onclick="plusQuantity('100')" type="button" value="+" id="btn-decre" name="btn-decre" class="btn-decre">
+                                </div>
+                            </div>
+                            <div class="main-products__btnGroup">
+                                <button class="btn-add">Add to cart</button>
+                                <button class="btn-order">Order now</button>
+                            </div>
+                            <div class="main-products__filterDesc">
+                                <h3 class="main-products__filterDesc--detail">
+                                    Titanium Classic
+                                    <span>
+                                        , understated and chic, is the perfect companion for any occasion.
+                                    </span>
+                                </h3>
+                                <br>
+                                <h3 class="main-products__filterDesc--detail">
+                                    Titanium Ebony
+                                    <span>
+                                        in black PVD, elevates the sense of mystery to the next level.
+                                    </span>
+                                </h3>
+                                <br>
+                                <h3 class="main-products__filterDesc--detail">
+                                    Titanium Rose
+                                    <span>
+                                        with soft colours is the perfect phone for the confident sophisticate.
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="pro-content container">
+                        <div class="pro-content__tabs">
+                            <ul class="pro-content__list">
+                                <li class="pro-content__item">
+                                    <button class="pro-content__link" href="#" onclick="openContent(event,'pro-content__infor')">Products Informations</button>
+                                </li>
+                                <li class="pro-content__item">
+                                    <button id="defaultOpen" class="pro-content__link active" href="#" onclick="openContent(event,'pro-content__policy')">Return & Warranty Policy</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pro-content__detail pro-content__container">
+                            <div id="pro-content__infor" class="pro-content__infor tabcontent">
+                                <div class="pro-content__policy--return">
+                                    <h2>1. Product's information</h2>
+                                    <p>Return Policy Customers have the right to refund the device within 28 days 
+                                        from the date of purchase if it is due to a manufacturer's fault.
+                                    </p>
+                                    <br>
+                                    <p>The refund is FREE</p>
+                                    <br>
+                                    <p>Refund conditions:</p>
+                                    <ul>
+                                        <li>The device works normally: not locked, showing IMEI.</li>
+                                        <li>The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
+                                        <li>With original box, accessories, and warranty card included.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="pro-content__policy" class="pro-content__policy tabcontent">
+                                <div class="pro-content__policy--return">
+                                    <h2>1. Return Policy</h2>
+                                    <p>Return Policy Customers have the right to refund the device within 28 days 
+                                        from the date of purchase if it is due to a manufacturer's fault.
+                                    </p>
+                                    <br>
+                                    <p>The refund is FREE</p>
+                                    <br>
+                                    <p>Refund conditions:</p>
+                                    <ul>
+                                        <li>The device works normally: not locked, showing IMEI.</li>
+                                        <li>The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
+                                        <li>With original box, accessories, and warranty card included.</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="pro-content__policy--warr">
+                                    <h2>1. Warranty Policy</h2>
+                                    <h4>Warranty coverage</h4>
+                                    <ul>
+                                        <li>All XOR phone products are officially distributed in the Vietnam market via Gluxury.</li>
+                                        <li>Warranty period: 1 year from the date of purchase based on the Warranty Card.</li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>The warranty period for repaired / replaced products</h4>
+                                    <p>The warranty period for replacement spare parts is calculated as follows:</p>
+                                    <ul>
+                                        <li>
+                                            If the product has a warranty period of more than 6 months, the warranty period of the replacement spare 
+                                            part will be equal to the remaining warranty period of the product.
+                                        </li>
+                                        <li>
+                                            If the product has less than 6 months of the warranty period 
+                                            or was out of warranty, the warranty period of replacement parts will be 6 months.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>Warranty period with renewed products</h4>
+                                    <p>The warranty period of the renewed products is calculated as follows:</p>
+                                    <ul>
+                                        <li>
+                                            If the product has a warranty period of more than 6 months, the warranty period of the new equipment
+                                             will be equal to the remaining warranty period of the product.</li>
+                                        <li>
+                                            If the product has a warranty period of fewer than 6 months or is out of warranty, 
+                                            the warranty period of renewed equipment will be 6 months.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>Warranty conditions</h4>
+                                    <p>The XOR phone products must be distributed genuinely in Vietnam.</p>
+                                    <p>
+                                        The products have some technical defects that need to be repaired within the warranty period.
+                                    </p>
+                                    <p>
+                                        The products will NOT be covered by warranty if 
+                                        they fall under the following warranty disclaimers:
+                                    </p>
+                                    <ul>
+                                        <li>Product warranty expires.</li>
+                                        <li>Cannot read IMEI on screen.</li>
+                                        <li>
+                                            There is no warranty card or the information on 
+                                            the warranty card does not match with the device information.
+                                        </li>
+                                        <li>The product is damaged due to normal wear and tear, improper use.</li>
+                                        <li>The product is tampered with by a third party</li>
+                                        <li>
+                                            Failure or damage due to accident, carelessness, dropping, fire or explosion, exposure to water or chemicals, 
+                                            used in high temperature or humid places, natural disasters.
+                                        </li>
+                                        <li>The device is in a locked state, locked sim.</li>
+                                        <li>
+                                            Errors or failures due to a functional error of the mobile network operators or a 
+                                            third party that is not under the control of XOR Inc.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="accessories">
+                        <h1 class="accessories__title">Pair With Our Accessories</h1>
+                        <div class="accessories__list container">
+                            <div class="accessories__card">
+                                <div class="accesssories__img">
+                                    <img src="./assets/images/accessories1.png" alt="">
+                                </div>
+                                <div class="accessories__infor">
+                                    <h2 class="accessories__name"><a class="accessories__name--link" href="">Luxury Belt Pouch XOR Case</a></h2>
+                                    <p class="accessories__price">$250</p>
+                                </div>
+                                <button class="accessories__btn">Add to cart</button>
+                            </div>
+                            <div class="accessories__card">
+                                <div class="accessories__img">
+                                    <img src="./assets/images/accessories2.png" alt="">
+                                </div>
+                                <div class="accessories__infor">
+                                    <h2 class="accessories__name"><a class="accessories__name--link" href="">Universal Wireless Charger</a></h2>
+                                    <p class="accessories__price">$165</p>
+                                </div>
+                                <button class="accessories__btn">Add to cart</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="collections">
+                    <h1 class="collections__title">Other Collections</h1>
+                    <div class="collections__list container">
+                        <div class="collections__img">
+                            <img class="img" src="./assets/images/collection1.png" alt="">
+                            <h3 class="collections__brand">XOR <span>Bespoke</span></h3>
+                        </div>
+                        <div class="collections__img">
+                            <img class="img" src="./assets/images/collection2.png" alt="">
+                            <h3 class="collections__brand">XOR <span>Odin</span></h3>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <section class="ft-infor">
+                    <div class="ft-container">
+                        <div class="ft-infor__hotline">
+                            <h4>Customer Services Hotline</h4>
+                        </div>
+                        <div class="ft-infor__time">
+                            <h4 class="ft-infor__time--weekdays">8:00 - 18:00 on weekdays   |   9:00 - 15:00 on Saturday and Sunday</h4>
+                        </div>
+                        <div class="ft-infor__phone">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <h4 class="ft-infor__phone--number">(+84)944 756 756</h4>
+                        </div>
+                    </div>
+                </section>
+                <section class="ft-nav">
+                    <div class="ft-nav__social">
+                        <div class="ft-nav__social--wrapper">
+                            <a href=""><img src="./assets/images/linkedin.png" alt=""></a>
+                            <a href=""><img src="./assets/images/instagram.png" alt=""></a>
+                            <a href=""><img src="./assets/images/fb.png" alt=""></a>
+                        </div>
+                    </div>
+                    <nav class="ft-nav__bar">
+                        <ul class="ft-nav__list">
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">Home</a></li>
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">About Us</a></li>
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">News</a></li>
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">Dealer</a></li>
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">Customer Service</a></li>
+                            <li class="ft-nav__item"><a class="ft-nav__link" href="">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="ft-nav__copyright">
+                        <p>Copyright informations</p>
+                    </div>
+                </section>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+    <!-- sass ./scss/app.scss ./css/app.css --watch -->
+</html>
