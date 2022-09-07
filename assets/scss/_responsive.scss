@@ -92,11 +92,11 @@
                 &__link{
                     &.active{
                         &::after{
-                            margin-top: 15px;
+                            margin-top: 16px;
                         }
                     }
                     &:hover::after{
-                        margin-top: 15px;
+                        margin-top: 16px;
                     }
                 }
             }
