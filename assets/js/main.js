@@ -54,6 +54,7 @@ function openContent(evt,contentType) {
     document.getElementById(contentType).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 //header scroll down
 window.onscroll = function (){
   if ( document.documentElement.scrollTop > 102){
