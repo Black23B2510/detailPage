@@ -1,7 +1,7 @@
 //Slideshow Gallery
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  spaceBetween: 10,
+  spaceBetween: 12,
   slidesPerView: 6,
   freeMode: true,
   watchSlidesProgress: true,
@@ -17,7 +17,14 @@ var swiper2 = new Swiper(".mySwiper2", {
     swiper: swiper,
   },
 });
-//main-products__filter
+
+//Mobile menu
+const mobileMenu = document.getElementById('mobile-menu');
+const menu = document.getElementById('main-nav__bar');
+mobileMenu.onclick = function() {
+  menu.classList.toggle('active');
+  mobileMenu.classList.toggle('close-button');
+}
 
 //Button increment/decrement
 function minusQuantity(min) {
@@ -46,14 +53,17 @@ function openContent(evt,contentType) {
     }
     document.getElementById(contentType).style.display = "block";
     evt.currentTarget.className += " active";
-    document.getElementById("defaulOpen").click();
 }
 //header scroll down
 window.onscroll = function (){
   if ( document.documentElement.scrollTop > 102){
-    document.getElementById('header').className = 'header';
+    document.getElementById('header-scrollBar').className = 'header-scroll';
+    document.getElementById('main-nav').className = 'header-scroll main-nav';
+    document.getElementById('main-nav__logo').className = 'header-logo';
   }else {
-    document.getElementById('header').className = "";
+    document.getElementById('header-scrollBar').className = '';
+    document.getElementById('main-nav').className = 'main-nav';
+    document.getElementById('main-nav__logo').className = '';
   }
 }
 

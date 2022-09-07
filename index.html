@@ -14,13 +14,18 @@
     </head>
     <body>
         <div class="wrapper">
-            <header >
+            <header id="header-scrollBar">
                 <div class="container" >
-                    <div class="main-nav">
+                    <div id="main-nav" class="main-nav">
                         <div class="main-nav__logo">
-                            <img src="./assets/images/logo.png" alt="">
+                            <img id="main-nav__logo" src="./assets/images/logo.png" alt="">
                         </div>
-                        <nav class="main-nav__bar">
+                        <div id="mobile-menu" class="main-nav__icon active">
+                            <div class="main-nav__icon--line line1"></div>
+                            <div class="main-nav__icon--line line2"></div>
+                            <div class="main-nav__icon--line line3"></div>
+                        </div>
+                        <nav class="main-nav__bar" id="main-nav__bar">
                             <ul class="main-nav__list">
                                 <li class="main-nav__item"><a
                                         class="main-nav__link" href="">About us</a></li>
@@ -35,14 +40,32 @@
                                 <li class="main-nav__item devide">
                                     <a class="main-nav__link" href="">Contact Us</a>
                                 </li>
-                                <li class="main-nav__item">
+                                <li class="main-nav__item mobile-cart">
                                     <a class="main-nav__cart" href="">My cart</a>
                                     <span class="main-nav__cart--qty">3</span>
                                 </li>
-                                <li class="main-nav__item"><a class="main-nav__lang" href="">
-                                    <img src="./assets/images/England.png" alt="">
-                                    <i class="fa fa-chevron-down main-nav__lang--icon" aria-hidden="true"></i>
-                                </a></li>
+                                <li class="main-nav__item">
+                                    <ul class="main-nav__lang">
+                                        <li class="main-nav__lang--list">
+                                            <img src="./assets/images/England.png" alt="">
+                                            <i class="fa fa-chevron-down main-nav__lang--icon" aria-hidden="true"></i>
+                                            <ul class="main-nav__lang--option">
+                                                <li class="main-nav__lang--detail">
+                                                    <a href="#" class="vi main-nav__lang--link">Việt Nam</a>
+                                                </li>
+                                                <li class="main-nav__lang--detail">
+                                                    <a href="" class="la main-nav__lang--link">Laos</a>
+                                                </li>
+                                                <li class="main-nav__lang--detail">
+                                                    <a href="" class="fr main-nav__lang--link">French</a>
+                                                </li>
+                                                <li class="main-nav__lang--detail">
+                                                    <a href="" class="ko main-nav__lang--link">Korea</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -156,100 +179,101 @@
                         </div>
                         <div class="pro-content__detail pro-content__container">
                             <div id="pro-content__infor" class="pro-content__infor tabcontent">
-                                <div class="pro-content__policy--return">
-                                    <h2>1. Product's information</h2>
-                                    <p>Return Policy Customers have the right to refund the device within 28 days 
+                                <div class="pro-content__infor--main">
+                                    <h2 class="pro-content__infor--title">1. Product's information</h2>
+                                    <p class="pro-content__infor--txt">Return Policy Customers have the right to refund the device within 28 days 
                                         from the date of purchase if it is due to a manufacturer's fault.
                                     </p>
                                     <br>
-                                    <p>The refund is FREE</p>
+                                    <p class="pro-content__infor--txt">The refund is FREE</p>
                                     <br>
-                                    <p>Refund conditions:</p>
-                                    <ul>
-                                        <li>The device works normally: not locked, showing IMEI.</li>
-                                        <li>The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
-                                        <li>With original box, accessories, and warranty card included.</li>
+                                    <p class="pro-content__infor--txt">Refund conditions:</p>
+                                    <ul class="pro-content__infor--list">
+                                        <li class="pro-content__infor--item">The device works normally: not locked, showing IMEI.</li>
+                                        <li class="pro-content__infor--item">The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
+                                        <li class="pro-content__infor--item">With original box, accessories, and warranty card included.</li>
                                     </ul>
                                 </div>
                             </div>
                             <div id="pro-content__policy" class="pro-content__policy tabcontent">
                                 <div class="pro-content__policy--return">
-                                    <h2>1. Return Policy</h2>
-                                    <p>Return Policy Customers have the right to refund the device within 28 days 
+                                    <h2 class="pro-content__policy--title">1. Return Policy</h2>
+                                    <p class="pro-content__policy--txt">Return Policy Customers have the right to refund the device within 28 days 
                                         from the date of purchase if it is due to a manufacturer's fault.
                                     </p>
                                     <br>
-                                    <p>The refund is FREE</p>
+                                    <p class="pro-content__policy--txt">The refund is FREE</p>
                                     <br>
-                                    <p>Refund conditions:</p>
-                                    <ul>
-                                        <li>The device works normally: not locked, showing IMEI.</li>
-                                        <li>The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
-                                        <li>With original box, accessories, and warranty card included.</li>
+                                    <p class="pro-content__policy--txt">Refund conditions:</p>
+                                    <ul class="pro-content__policy--list">
+                                        <li class="pro-content__policy--item">The device works normally: not locked, showing IMEI.</li>
+                                        <li class="pro-content__policy--item">The device is intact, not scratched, burned, soaked in water or chemicals, not dropped.</li>
+                                        <li class="pro-content__policy--item">With original box, accessories, and warranty card included.</li>
                                     </ul>
                                 </div>
                                 <br>
                                 <br>
                                 <div class="pro-content__policy--warr">
-                                    <h2>1. Warranty Policy</h2>
-                                    <h4>Warranty coverage</h4>
-                                    <ul>
-                                        <li>All XOR phone products are officially distributed in the Vietnam market via Gluxury.</li>
-                                        <li>Warranty period: 1 year from the date of purchase based on the Warranty Card.</li>
+                                    <h2 class="pro-content__policy--title">1. Warranty Policy</h2>
+                                    <h4 class="pro-content__policy--part">Warranty coverage</h4>
+                                    <ul class="pro-content__policy--list">
+                                        <li class="pro-content__policy--item">All XOR phone products are officially distributed in the Vietnam market via Gluxury.</li>
+                                        <li class="pro-content__policy--item">Warranty period: 1 year from the date of purchase based on the Warranty Card.</li>
                                     </ul>
                                     <br>
                                     <br>
-                                    <h4>The warranty period for repaired / replaced products</h4>
-                                    <p>The warranty period for replacement spare parts is calculated as follows:</p>
-                                    <ul>
-                                        <li>
+                                    <h4 class="pro-content__policy--part">The warranty period for repaired / replaced products</h4>
+                                    <p class="pro-content__policy--txt">The warranty period for replacement spare parts is calculated as follows:</p>
+                                    <ul class="pro-content__policy--list">
+                                        <li class="pro-content__policy--item">
                                             If the product has a warranty period of more than 6 months, the warranty period of the replacement spare 
                                             part will be equal to the remaining warranty period of the product.
                                         </li>
-                                        <li>
+                                        <li class="pro-content__policy--item">
                                             If the product has less than 6 months of the warranty period 
                                             or was out of warranty, the warranty period of replacement parts will be 6 months.
                                         </li>
                                     </ul>
                                     <br>
                                     <br>
-                                    <h4>Warranty period with renewed products</h4>
-                                    <p>The warranty period of the renewed products is calculated as follows:</p>
-                                    <ul>
-                                        <li>
+                                    <h4 class="pro-content__policy--part">Warranty period with renewed products</h4>
+                                    <p class="pro-content__policy--txt">The warranty period of the renewed products is calculated as follows:</p>
+                                    <ul class="pro-content__policy--list">
+                                        <li class="pro-content__policy--item">
                                             If the product has a warranty period of more than 6 months, the warranty period of the new equipment
-                                             will be equal to the remaining warranty period of the product.</li>
-                                        <li>
+                                             will be equal to the remaining warranty period of the product.
+                                        </li>
+                                        <li class="pro-content__policy--item">
                                             If the product has a warranty period of fewer than 6 months or is out of warranty, 
                                             the warranty period of renewed equipment will be 6 months.
                                         </li>
                                     </ul>
                                     <br>
                                     <br>
-                                    <h4>Warranty conditions</h4>
-                                    <p>The XOR phone products must be distributed genuinely in Vietnam.</p>
-                                    <p>
+                                    <h4 class="pro-content__policy--part">Warranty conditions</h4>
+                                    <p class="pro-content__policy--txt">The XOR phone products must be distributed genuinely in Vietnam.</p>
+                                    <p class="pro-content__policy--txt">
                                         The products have some technical defects that need to be repaired within the warranty period.
                                     </p>
-                                    <p>
+                                    <p class="pro-content__policy--txt">
                                         The products will NOT be covered by warranty if 
                                         they fall under the following warranty disclaimers:
                                     </p>
-                                    <ul>
-                                        <li>Product warranty expires.</li>
-                                        <li>Cannot read IMEI on screen.</li>
-                                        <li>
+                                    <ul class="pro-content__policy--list">
+                                        <li class="pro-content__policy--item">Product warranty expires.</li>
+                                        <li class="pro-content__policy--item">Cannot read IMEI on screen.</li>
+                                        <li class="pro-content__policy--item">
                                             There is no warranty card or the information on 
                                             the warranty card does not match with the device information.
                                         </li>
-                                        <li>The product is damaged due to normal wear and tear, improper use.</li>
-                                        <li>The product is tampered with by a third party</li>
-                                        <li>
+                                        <li class="pro-content__policy--item">The product is damaged due to normal wear and tear, improper use.</li>
+                                        <li class="pro-content__policy--item">The product is tampered with by a third party</li>
+                                        <li class="pro-content__policy--item">
                                             Failure or damage due to accident, carelessness, dropping, fire or explosion, exposure to water or chemicals, 
                                             used in high temperature or humid places, natural disasters.
                                         </li>
-                                        <li>The device is in a locked state, locked sim.</li>
-                                        <li>
+                                        <li class="pro-content__policy--item">The device is in a locked state, locked sim.</li>
+                                        <li class="pro-content__policy--item">
                                             Errors or failures due to a functional error of the mobile network operators or a 
                                             third party that is not under the control of XOR Inc.
                                         </li>
@@ -297,6 +321,14 @@
                         </div>
                     </div>
                 </section>
+                <!-- <section class="contact-method">
+                    <div class="contact-mothod__mess">
+                        <i class="fa-brands fa-facebook-messenger contact-method__mess--icon"></i>
+                    </div>
+                    <div class="contact-method__phone">
+                        <i class="fa-solid fa-phone contact-method__phone--icon"></i>
+                    </div>
+                </section> -->
             </main>
             <footer>
                 <section class="ft-infor">

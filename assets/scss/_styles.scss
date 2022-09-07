@@ -1,23 +1,40 @@
 //Navigation bar
-.header{
-    overflow: hidden;
-    transition: 0.5s; 
-    background: #957327;
+.header-scroll{
+    height: 90px !important;
+    background-color: #002A3A !important;
+    overflow: hidden; 
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    transition: height 0.5s;
+
+}
+.header-logo{
+    width: 80px;
+    height: 50px;
+    transition: 0.3s;
 }
 header{
+    width: 100%;
+    height: 102px;
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
-    background-color: $bgd-nav;
     z-index: 999;
-    .main-nav{
-        width: 100%;
+    background-color: $bgd-nav;
+    & .main-nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 102px;
         background-color: $bgd-nav;
+        &__icon{
+            display: none;
+            &--line{
+                width: 35px;
+                height: 5px;
+                margin: 5px 0;
+                background-color: $ft-txt;
+            }
+        }
         &__list{
             display: flex;
             column-gap: 48px;
@@ -28,7 +45,7 @@ header{
             font-size: var(--fz-filter);
             font-weight: var(--fw-nav);
             line-height: var(--lh-nav);
-            letter-spacing: var(--lt-1);
+            letter-spacing: 0.045em;
         }
         &__item:nth-child(7){
             margin-left: 12px;
@@ -49,6 +66,10 @@ header{
         }
         &__link{
             color: $ft-txt;
+            &:hover{
+                transition: all .5s;
+                color: $bgd-footer;
+            }
         }
         &__cart{
                 color: $ft-txt;
@@ -65,11 +86,65 @@ header{
             }
         }
         &__lang{
+            &--list{
+                display: inline-block;
+                &:hover ul{
+                    display: block;
+                    position: absolute;
+                }
+            }
             &--icon{
                 margin-left: 6px;
-                &__list{
                 color: $ft-txt;
+            }
+            &--option{
+                margin: 0;
+                padding: 0;
+                display: none;
+                position: absolute;
+                top: 25px;
+                right: 0px;
+                width: 145px;
+                border-radius: 5px;
+                border: 1px solid #f8f8f8;
+                box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+                background-color: #fff;
+            }
+            &--detail{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                text-align: left;
+            }
+            &--link{
+                display: block;
+                width: 145px;
+                padding: 5px 10px;
+                color: $bgd-nav;
+                text-decoration: none;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                 }
+                &.vi::before{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png');
+                }
+                &.la::before{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg');
+                }
+                &.fr::before{
+                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR8AAACwCAMAAAABtJrwAAAAbFBMVEX////tHSYtNokkLoVzfLPtFR/8/P8oNIgrN4nxTlU0RJT81truChitsNIXKIPsAA/7ra/1gYaDibghLIbsAACIj7yBh7j95uj1mJ0qPZEVI4LxSFAkNo4HHn9rdq/xREyztNfGydz87vD7u7lKisY3AAABYElEQVR4nO3QyYoCMRRAUTUO5dxtlfPc/v8/doGCheii5C0Ez12E8BJIOI2GJEn6kuaz0Bbj4P8tf2Nb1Xu+u85TXpbSfakOyjU93rhdue3zVD3cHIJ9hsUosum2ps+gl7XKsuta2b4YZM8G93upHe0zakbW6b/nExUfPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHDhw8fPnz48OHzlT67zSSy/SHap5hGVhxrvn8ax3YO9vn7ie0S/D9JkvTB/QPwKuJut5f+igAAAABJRU5ErkJggg==');
+                }
+                &.ko::before{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Flag_of_South_Korea_%281945%E2%80%931948%29.svg/2560px-Flag_of_South_Korea_%281945%E2%80%931948%29.svg.png');
+                }
+
             }
         }
     }
@@ -78,43 +153,38 @@ header{
 main{
     width: 100%;
     .main__wrapper{
-        // background-color: #F5F5F5;
-        //main-products
         .main-products__wrapper{
             max-width: 1219px;
             margin: 155px auto 0 auto;
             padding: 0 15px;
             &.main-products{
-                // max-height: 687px !important;
-                // height: 50vw;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                gap: 115px;
             }
         }
         .main-products{
             &__slider{
                 max-width: 589px;
-                width: 100%;
+                width: 40.903vw;
                 .swiper {
                     &.mySwiper2 {
-                        height: 85.7350800582%;
+                        // height: 40.903vw;
                     }
                     &.mySwiper {
                         margin: 18px 0 0 0;
-                        .swiper-slide {
-                            opacity: 0.4;
+                        & .swiper-slide{
+                            padding: 10px;
+                            opacity: 0.7;
                             img{
                                 display: block;
-                                width: 60px;
-                                height: 60px;
+                                width: 100%;
+                                height: 100%;
                                 object-fit: cover;
                             }
                         }
-                        .swiper-slide-thumb-active {
-                            padding: 9px;
-                            opacity: 1;
+                        & .swiper-slide-thumb-active {
                             border: 1px solid #A5A5A5;
+                            opacity: 1;
                         }
                     }
                     &-slide{
@@ -135,6 +205,7 @@ main{
                         -webkit-align-items: center;
                         align-items: center;
                         img{
+                            // padding: 10px;
                             display: block;
                             width: 100%;
                             height: 100%;
@@ -165,7 +236,7 @@ main{
             }
             &__desc{
                 max-width: 485px;
-                width: 100%;
+                width: 33.681vw;
                 padding: 50px 0 86px 0;
             }
             &__name{
@@ -233,6 +304,7 @@ main{
                     font-size: var(--fz-navbar);
                     line-height: var(--lh-title);
                     color: #001A31;
+                    transform: scale(1.2);
                 }
             }
             &__qty{
@@ -242,7 +314,7 @@ main{
                 margin-top: 61px;
                 margin-bottom: 16px;
                 label{
-                    margin-right: 28px;
+                    margin-right: 38px;
                     font-family: $ff-poppins;
                     font-weight: var(--fw-main);
                     font-size: var(--fz-navbar);
@@ -305,7 +377,12 @@ main{
                 display: flex;
                 column-gap: 16px;
                 .btn-add{
-                    padding: 13.5px 71.5px;
+                    width: 16.319vw;
+                    height: 3.333vw;
+                    max-width: 234px;
+                    min-width: 100px;
+                    max-height: 48px;
+                    min-height: 28px;
                     border-radius: 30px;
                     border: 2px solid;
                     border-color: linear-gradient(#CC9F3A 100%, #EBCF82 100%);
@@ -318,12 +395,18 @@ main{
                     color: #CB9D37;
                     background: #F5F5F5;
                     &:hover{
+                        transition: 0.5s ease-out;
                         color: #FFFFFF;
                         background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
                     }
                 }
                 .btn-order{
-                    padding: 13px 77px;
+                    width: 16.319vw;
+                    height: 3.333vw;
+                    max-width: 234px;
+                    min-width: 100px;
+                    max-height: 48px;
+                    min-height: 28px;
                     border-radius: 30px;
                     font-family: $ff-poppins;
                     font-weight: var(--fw-nav);
@@ -334,6 +417,9 @@ main{
                     color: #FFFFFF;
                     background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
                     &:hover{
+                        border: 2px solid;
+                        border-color: linear-gradient(#CC9F3A 100%, #EBCF82 100%);
+                        transition: 0.5s ease-out;
                         color: #CB9D37;
                         background: #F5F5F5;
                     }
@@ -372,11 +458,10 @@ main{
                 border-bottom: 1px solid $bgd-collections;
             }
             &__item{
-                position: relative;
                 padding-bottom: 15px;
+                position: relative;
             }
             &__link{
-                background: none;
                 position: relative;
                 font-family: $ff-roboto;
                 font-weight: var(--fw-main);
@@ -384,6 +469,7 @@ main{
                 line-height: var(--lh-title);
                 letter-spacing: var(--lt-2);
                 color: #A5A5A5;
+                background: none;
                 &.active{
                     font-weight: var(--fw-title);
                     font-size: var(--fz-name);
@@ -398,7 +484,7 @@ main{
                         margin-top: 13px;
                         position: absolute;
                         background-color: #001A31;
-                        transition: all 0.3s ease;
+                        transition: all .3s;
                     }
                 }
                 &:hover::after{
@@ -421,30 +507,31 @@ main{
                 }
             }
             &__policy,&__infor{
-                h2{
-                    font-size: 24px;
-                    font-weight: 700;
-                    line-height: 36px;
+                &--title{
+                    font-size: var(--fz-main);
+                    font-weight: var(--fw-title);
+                    line-height: var(--lh-content);
                 }
-                h4{
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 24px;
+                &--part{
+                    font-size: var(--fz-text);
+                    font-weight: var(--fw-title);
+                    line-height: var(lh-txt);
                 }
-                p{
-                    font-size: 16px;
-                    font-weight: 400;
+                &--txt{
+                    font-size: var(--fz-text);
+                    font-weight: var(--fw-main);
                     line-height: 25.6px;
                     letter-spacing: 2.5%;
                 }
-                ul{
+                &--list{
+                    padding-left: 20px;
                     list-style-position: inside;
                     list-style-type: disc;
-                    li{
-                        font-size: var(--fz-text);
-                        font-weight: var(--fw-main);
-                        line-height: var(--lh-txt);
-                    }
+                }
+                &--item{
+                    font-size: var(--fz-text);
+                    font-weight: var(--fw-main);
+                    line-height: var(--lh-txt);
                 }
             }
             &__infor{
@@ -477,7 +564,6 @@ main{
                 justify-content: center;
                 align-items: center;
                 width: calc(100%/2);
-                // lưu ý
                 max-height: 370px;
                 height: 50vw;
                 border-radius: 3px;
@@ -542,14 +628,14 @@ main{
             width: calc(100%/2);
             position: relative;
             .img{
-                height: 100%;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         }
         &__brand{
             position: absolute;
-            top: 197px;
+            bottom: 24px;
             left: 32px;
             font-family: $ff-roboto;
             font-size: var(--fz-brand);
@@ -561,6 +647,21 @@ main{
             }
         }
     }
+    //Contact method
+    // & .contact-method{
+    //     right: 0;
+    //     z-index: 9999;
+    //     display: flex;
+    //     position: fixed;
+    //     flex-direction: column;
+    //     gap: 24px;
+    //     &__mess, &__phone{
+    //         padding: 10px;
+    //         &--icon{
+                
+    //         }
+    //     }
+    // }
 }
 //footer
 footer{
@@ -598,8 +699,8 @@ footer{
             display: flex;
             column-gap: 16px;
             padding: 13px 20.5px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
             .icon{
                 color: $ft-txt;
             }
@@ -645,12 +746,12 @@ footer{
         &__item{
             position: relative;
             &:not(:last-child)::after{
-                position: absolute;
                 content: "";
                 height: 19px;
-                border: 1px solid $ft-txt;
                 margin-left: 49px;
+                position: absolute;
                 top: 3.2%;
+                border: 1px solid $ft-txt;
                 background-color: $ft-txt;
             }
         }
