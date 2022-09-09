@@ -76,8 +76,8 @@
                 transition: 0.5s;
                 opacity: 0;
             }
-            &__item:nth-child(6){
-                &.devide::after{
+            &__item{
+                &--line{
                     display: none;
                 }
             }
@@ -89,6 +89,7 @@
     main{
         .main__wrapper{
             .pro-content{
+                margin-top: 60px;
                 &__link{
                     &.active{
                         &::after{
@@ -98,6 +99,11 @@
                     &:hover::after{
                         margin-top: 16px;
                     }
+                }
+            }
+            .accessories{
+                &__infor{
+                    margin: 16px auto 15px auto;
                 }
             }
         }
@@ -156,12 +162,12 @@
                         .btn-incre{
                             width: 8px;
                             height: 17px;
-                            margin: 7px 8px 8px 10px;
+                            padding: 7px 8px 8px 10px;
                         }
                         .btn-decre{
                             width: 9px;
                             height: 17px;
-                            margin: 7px 20px 8px 8px;
+                            padding: 7px 20px 8px 8px;
                         }
                         .qty{
                             width: 28px;
@@ -169,11 +175,6 @@
                             margin: 7px 0 8px 0;
                         }
                     }
-                }
-            }
-            .accessories{
-                &__infor{
-                    margin: 16px auto 33px auto;
                 }
             }
         }
@@ -193,6 +194,16 @@
             .main-products{
                 &__desc{
                     padding: 0 0 43px 0;
+                }
+            }
+            .pro-content{
+                &__policy,&__infor{
+                    &--return,&--list{
+                        margin-bottom: 24px;
+                    }
+                    &--spacing{
+                        margin-bottom: 12px;
+                    }
                 }
             }
             .accessories{
@@ -234,6 +245,19 @@
                 gap: 15px; 
                 height: auto;
                 padding: 15px 15px;
+            }
+            &__time{
+                &--weekdays{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+            &__time{
+                &--line{
+                    display: none;
+                }
             }
             &__phone{
                 justify-content: center;

@@ -209,16 +209,11 @@ header .main-nav__item {
   line-height: var(--lh-nav);
   letter-spacing: 0.045em;
 }
-header .main-nav__item:nth-child(7) {
-  margin-left: 12px;
-}
-header .main-nav__item:nth-child(6).devide::after {
-  position: absolute;
-  content: "";
+header .main-nav__item--line {
   height: 19px;
-  top: 3.2%;
-  left: 132%;
-  border: 1px solid #D8D8D8;
+  width: 2px;
+  margin: 0 -18px;
+  color: #D8D8D8;
   background-color: #D8D8D8;
 }
 header .main-nav__item:last-child {
@@ -228,6 +223,7 @@ header .main-nav__link {
   color: #FFFFFF;
 }
 header .main-nav__link:hover {
+  cursor: pointer;
   transition: all 0.5s;
   color: #B69046;
 }
@@ -384,7 +380,6 @@ main .main__wrapper .main-products__slider .swiper-button-next:hover {
 }
 main .main__wrapper .main-products__desc {
   max-width: 485px;
-  width: 33.681vw;
   padding: 50px 0 86px 0;
 }
 main .main__wrapper .main-products__name {
@@ -453,7 +448,6 @@ main .main__wrapper .main-products__btn:hover {
   font-size: var(--fz-navbar);
   line-height: var(--lh-title);
   color: #001A31;
-  transform: scale(1.2);
 }
 main .main__wrapper .main-products__qty {
   display: flex;
@@ -479,7 +473,7 @@ main .main__wrapper .main-products__qty--numbers {
 main .main__wrapper .main-products__qty--numbers .btn-incre {
   width: 10px;
   height: 21px;
-  margin: 13px 14px 14px 20px;
+  padding: 13px 14px 14px 20px;
   float: left;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -488,11 +482,12 @@ main .main__wrapper .main-products__qty--numbers .btn-incre {
   line-height: var(--lh-title);
   letter-spacing: var(--lt-2);
   color: #000000;
+  cursor: pointer;
   background: none;
   -webkit-appearance: none;
 }
 main .main__wrapper .main-products__qty--numbers .btn-decre {
-  margin: 13px 20px 14px 14px;
+  padding: 13px 20px 14px 14px;
   width: 11px;
   height: 21px;
   float: left;
@@ -503,6 +498,7 @@ main .main__wrapper .main-products__qty--numbers .btn-decre {
   line-height: var(--lh-title);
   letter-spacing: var(--lt-2);
   color: #000000;
+  cursor: pointer;
   background: none;
   -webkit-appearance: none;
 }
@@ -542,6 +538,7 @@ main .main__wrapper .main-products__btnGroup .btn-add {
   text-align: center;
   letter-spacing: var(--lt-1);
   color: #CB9D37;
+  cursor: pointer;
   background: #F5F5F5;
 }
 main .main__wrapper .main-products__btnGroup .btn-add:hover {
@@ -564,6 +561,7 @@ main .main__wrapper .main-products__btnGroup .btn-order {
   text-align: center;
   letter-spacing: var(--lt-1);
   color: #FFFFFF;
+  cursor: pointer;
   background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
 }
 main .main__wrapper .main-products__btnGroup .btn-order:hover {
@@ -577,6 +575,7 @@ main .main__wrapper .main-products__filterDesc {
   margin-top: 48px;
 }
 main .main__wrapper .main-products__filterDesc--detail {
+  margin-bottom: 24px;
   font-family: "Poppins", sans-serif;
   font-size: var(--fz-filter);
   font-weight: var(--fw-title);
@@ -591,7 +590,7 @@ main .main__wrapper .main-products__filterDesc--detail span {
   color: #001A31;
 }
 main .main__wrapper .pro-content {
-  margin-top: 106px;
+  margin-top: 96px;
 }
 main .main__wrapper .pro-content__tabs {
   margin-bottom: 47px;
@@ -653,28 +652,34 @@ main .main__wrapper .pro-content__detail.pro-content__container {
   max-width: 785px;
   margin: 0 auto;
 }
-main .main__wrapper .pro-content__policy--title, main .main__wrapper .pro-content__infor--title {
+main .main__wrapper .pro-content__policy--return, main .main__wrapper .pro-content__policy--list, main .main__wrapper .pro-content__infor--return, main .main__wrapper .pro-content__infor--list {
+  margin-bottom: 48px;
+}
+main .main__wrapper .pro-content__policy--spacing, main .main__wrapper .pro-content__infor--spacing {
+  margin-bottom: 24px;
+}
+main .main__wrapper .pro-content__policy h2, main .main__wrapper .pro-content__infor h2 {
   font-size: var(--fz-main);
   font-weight: var(--fw-title);
   line-height: var(--lh-content);
 }
-main .main__wrapper .pro-content__policy--part, main .main__wrapper .pro-content__infor--part {
+main .main__wrapper .pro-content__policy h4, main .main__wrapper .pro-content__infor h4 {
   font-size: var(--fz-text);
   font-weight: var(--fw-title);
   line-height: var(lh-txt);
 }
-main .main__wrapper .pro-content__policy--txt, main .main__wrapper .pro-content__infor--txt {
+main .main__wrapper .pro-content__policy p, main .main__wrapper .pro-content__infor p {
   font-size: var(--fz-text);
   font-weight: var(--fw-main);
   line-height: 25.6px;
   letter-spacing: 2.5%;
 }
-main .main__wrapper .pro-content__policy--list, main .main__wrapper .pro-content__infor--list {
+main .main__wrapper .pro-content__policy ul, main .main__wrapper .pro-content__infor ul {
   padding-left: 20px;
   list-style-position: inside;
   list-style-type: disc;
 }
-main .main__wrapper .pro-content__policy--item, main .main__wrapper .pro-content__infor--item {
+main .main__wrapper .pro-content__policy li, main .main__wrapper .pro-content__infor li {
   font-size: var(--fz-text);
   font-weight: var(--fw-main);
   line-height: var(--lh-txt);
@@ -709,9 +714,17 @@ main .main__wrapper .accessories__card {
   align-items: center;
   width: 50%;
   max-height: 370px;
-  height: 50vw;
+  height: 25.694vw;
   border-radius: 3px;
   background-color: #FAFAFA;
+}
+main .main__wrapper .accessories__img img {
+  max-height: 120px;
+  min-height: 80px;
+  height: 8.333vw;
+}
+main .main__wrapper .accessories__img:hover {
+  cursor: pointer;
 }
 main .main__wrapper .accessories__infor {
   margin: 16px auto 55px auto;
@@ -743,6 +756,11 @@ main .main__wrapper .accessories__btn {
   line-height: var(--lh-add);
   letter-spacing: var(--lt-1);
   color: #CB9D37;
+}
+main .main__wrapper .accessories__btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.5s;
 }
 main .collections {
   width: 100%;
@@ -788,6 +806,36 @@ main .collections__brand {
 main .collections__brand span {
   font-weight: var(--fw-title);
 }
+main .contact-method {
+  right: 0;
+  bottom: 4px;
+  z-index: 99;
+  cursor: pointer;
+  position: fixed;
+}
+main .contact-method__mess, main .contact-method__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 64px;
+  max-height: 64px;
+  width: 4.444vw;
+  min-width: 44px;
+  height: 4.444vw;
+  min-height: 44px;
+  margin-bottom: 16px;
+  font-size: 25px;
+  border: 1px solid white;
+  border-radius: 32px;
+  background-color: white;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+}
+main .contact-method__mess .mess-icon, main .contact-method__phone .mess-icon {
+  color: #357FFF;
+}
+main .contact-method__mess .phone-icon, main .contact-method__phone .phone-icon {
+  color: #002A3A;
+}
 
 footer .ft-infor {
   background-color: #00344C;
@@ -809,9 +857,6 @@ footer .ft-infor__hotline {
   letter-spacing: var(--lt-1);
   color: #FFFFFF;
 }
-footer .ft-infor__time {
-  display: flex;
-}
 footer .ft-infor__time--weekdays {
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw-main);
@@ -819,6 +864,9 @@ footer .ft-infor__time--weekdays {
   line-height: var(--lh-ft);
   letter-spacing: var(--lt-1);
   color: #FFFFFF;
+}
+footer .ft-infor__time--line {
+  padding: 0 8px;
 }
 footer .ft-infor__phone {
   display: flex;
@@ -832,10 +880,10 @@ footer .ft-infor__phone .icon {
 }
 footer .ft-infor__phone--number {
   font-family: "Poppins", sans-serif;
-  font-weight: var(--fw-nav);
-  font-size: var(--fz-ft);
-  line-height: var(--lh-ft);
-  letter-spacing: var(--lt-1);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -849,13 +897,14 @@ footer .ft-nav__social {
 }
 footer .ft-nav__social--wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 186px;
   margin: 0 auto;
 }
-footer .ft-nav__social--wrapper .icon {
-  color: #FFFFFF;
+footer .ft-nav__social--wrapper img {
+  width: 30px;
+  height: 30px;
 }
 footer .ft-nav__bar {
   padding: 0 0 61px 0;
@@ -871,14 +920,11 @@ footer .ft-nav__list {
 footer .ft-nav__item {
   position: relative;
 }
-footer .ft-nav__item:not(:last-child)::after {
-  content: "";
-  height: 19px;
-  margin-left: 49px;
-  position: absolute;
-  top: 3.2%;
-  border: 1px solid #FFFFFF;
-  background-color: #FFFFFF;
+footer .ft-nav__item.line {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
 footer .ft-nav__link {
   font-family: "Poppins", sans-serif;
@@ -962,17 +1008,23 @@ footer .ft-nav__copyright p {
     transition: 0.5s;
     opacity: 0;
   }
-  header .main-nav__item:nth-child(6).devide::after {
+  header .main-nav__item--line {
     display: none;
   }
   header .main-nav__item:nth-child(7) {
     margin-left: 0;
+  }
+  main .main__wrapper .pro-content {
+    margin-top: 60px;
   }
   main .main__wrapper .pro-content__link.active::after {
     margin-top: 16px;
   }
   main .main__wrapper .pro-content__link:hover::after {
     margin-top: 16px;
+  }
+  main .main__wrapper .accessories__infor {
+    margin: 16px auto 15px auto;
   }
 }
 @media only screen and (max-width: 820px) {
@@ -1015,20 +1067,17 @@ footer .ft-nav__copyright p {
   main .main__wrapper .main-products__qty--numbers .btn-incre {
     width: 8px;
     height: 17px;
-    margin: 7px 8px 8px 10px;
+    padding: 7px 8px 8px 10px;
   }
   main .main__wrapper .main-products__qty--numbers .btn-decre {
     width: 9px;
     height: 17px;
-    margin: 7px 20px 8px 8px;
+    padding: 7px 20px 8px 8px;
   }
   main .main__wrapper .main-products__qty--numbers .qty {
     width: 28px;
     height: 17px;
     margin: 7px 0 8px 0;
-  }
-  main .main__wrapper .accessories__infor {
-    margin: 16px auto 33px auto;
   }
   footer .ft-nav__bar {
     padding: 0 0 45px 0;
@@ -1037,6 +1086,12 @@ footer .ft-nav__copyright p {
 @media only screen and (max-width: 640px) {
   main .main__wrapper .main-products__desc {
     padding: 0 0 43px 0;
+  }
+  main .main__wrapper .pro-content__policy--return, main .main__wrapper .pro-content__policy--list, main .main__wrapper .pro-content__infor--return, main .main__wrapper .pro-content__infor--list {
+    margin-bottom: 24px;
+  }
+  main .main__wrapper .pro-content__policy--spacing, main .main__wrapper .pro-content__infor--spacing {
+    margin-bottom: 12px;
   }
   main .main__wrapper .accessories__list {
     display: flex;
@@ -1071,6 +1126,15 @@ footer .ft-nav__copyright p {
     gap: 15px;
     height: auto;
     padding: 15px 15px;
+  }
+  footer .ft-infor__time--weekdays {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  footer .ft-infor__time--line {
+    display: none;
   }
   footer .ft-infor__phone {
     justify-content: center;
