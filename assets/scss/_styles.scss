@@ -236,9 +236,11 @@ main{
                 // width: 33.681vw;
                 padding: 50px 0 86px 0;
                 .error{
-                    max-width: 586px;
                     display: none;
+                    max-width: 586px;
+                    min-width: 300px;
                     max-height: 253px;
+                    min-height: 200px;
                     width: 40.694vw;
                     height: 17.569vw;
                     position: fixed;
@@ -277,8 +279,10 @@ main{
                         }
                         &--btn{
                             max-width: 522px;
+                            min-width: 200px;
                             width: 36.250vw;
                             max-height: 48px;
+                            min-height: 25px;
                             height: 3.333vw;
                             background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
                             border-radius: 30px;

@@ -390,9 +390,11 @@ main .main__wrapper .main-products__desc {
   padding: 50px 0 86px 0;
 }
 main .main__wrapper .main-products__desc .error {
-  max-width: 586px;
   display: none;
+  max-width: 586px;
+  min-width: 300px;
   max-height: 253px;
+  min-height: 200px;
   width: 40.694vw;
   height: 17.569vw;
   position: fixed;
@@ -433,8 +435,10 @@ main .main__wrapper .main-products__desc .error__container--mess span {
 }
 main .main__wrapper .main-products__desc .error__container--btn {
   max-width: 522px;
+  min-width: 200px;
   width: 36.25vw;
   max-height: 48px;
+  min-height: 25px;
   height: 3.333vw;
   background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
   border-radius: 30px;
@@ -1212,6 +1216,18 @@ footer .ft-nav__copyright p {
   }
   main .main__wrapper .main-products .swiper-button-prev {
     margin-left: 20px !important;
+  }
+  main .main__wrapper .main-products__qty--numbers {
+    width: 95px;
+  }
+  main .main__wrapper .main-products__qty--numbers .btn-incre {
+    padding: 7px 7px 7px 10px;
+  }
+  main .main__wrapper .main-products__qty--numbers .btn-decre {
+    padding: 7px 10px 7px 7px;
+  }
+  main .main__wrapper .main-products__qty--numbers .qty {
+    height: 17px;
   }
   main .main__wrapper .accessories__infor {
     margin: 16px auto 20px auto;

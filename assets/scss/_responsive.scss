@@ -271,6 +271,20 @@
                         margin-left: 20px !important; 
                     }
                 }
+                &__qty{
+                    &--numbers{
+                        width: 95px;
+                        .btn-incre{
+                            padding: 7px 7px 7px 10px;
+                        }
+                        .btn-decre{
+                            padding: 7px 10px 7px 7px;
+                        }
+                        .qty{
+                            height: 17px;
+                        }
+                    }
+                }
             }
             .accessories{
                 &__infor{
