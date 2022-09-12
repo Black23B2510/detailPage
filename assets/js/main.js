@@ -72,7 +72,7 @@ window.onscroll = function (){
 function limitedAmount() {
   let qty = parseInt(document.getElementById('qty').value);
   if (qty>2) {
-    document.getElementById('error').style.display = 'block';
+    document.getElementById('error').style.display = 'flex';
   }
 }
 function closeError() {

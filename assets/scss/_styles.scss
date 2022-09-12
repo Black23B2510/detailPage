@@ -237,26 +237,31 @@ main{
                 padding: 50px 0 86px 0;
                 .error{
                     display: none;
-                    max-width: 586px;
-                    min-width: 300px;
-                    max-height: 253px;
-                    min-height: 200px;
-                    width: 40.694vw;
-                    height: 17.569vw;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
                     position: fixed;
-                    left: 50%;
-                    margin-left: -150px;
-                    top: 50%;
-                    margin-top: -100px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 99;
                     &__container{
+                        max-width: 616px;
+                        max-height: 253px;
+                        min-width: 300px;
+                        min-height: auto;
+                        width: 40.486vw;
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-around;
+                        justify-content: center;
                         align-items: center;
                         gap: 32px;
-                        padding: 32px;
-                        z-index: 9999;
+                        padding: 32px 15px;
                         background-color: $ft-txt;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        border-radius: 3px;
                         &--title{
                             font-family: $ff-roboto;
                             font-weight: var( --fw-title);
@@ -272,6 +277,7 @@ main{
                             font-size: var( --fz-filter);
                             line-height: 150%;
                             text-align: center;
+                            padding: 0 32px;
                             color: #001A31;
                             span{
                                 font-weight: var(--fw-title);
@@ -297,17 +303,17 @@ main{
                             }
                         }
                     }
-                    &::after{
-                        position: fixed;
-                        content: "";
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        background: #000000;
-                        opacity: 0.5;
-                        z-index: -1;
-                    }
+                    // &::after{
+                    //     position: fixed;
+                    //     content: "";
+                    //     top: 0;
+                    //     left: 0;
+                    //     bottom: 0;
+                    //     right: 0;
+                    //     background: #000000;
+                    //     opacity: 0.5;
+                    //     z-index: -1;
+                    // }
                 }
             }
             &__name{
