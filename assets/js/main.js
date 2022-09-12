@@ -1,3 +1,5 @@
+const mobileMenu = document.getElementById('mobile-menu');
+const menu = document.getElementById('main-nav__bar');
 //Slideshow Gallery
 var swiper = new Swiper(".mySwiper", {
   loop: true,
@@ -19,8 +21,6 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 //Mobile menu
-const mobileMenu = document.getElementById('mobile-menu');
-const menu = document.getElementById('main-nav__bar');
 mobileMenu.onclick = function() {
   menu.classList.toggle('active');
   mobileMenu.classList.toggle('close-button');
@@ -66,5 +66,16 @@ window.onscroll = function (){
     document.getElementById('main-nav').className = 'main-nav';
     document.getElementById('main-nav__logo').className = '';
   }
+}
+
+//amount warning
+function limitedAmount() {
+  let qty = parseInt(document.getElementById('qty').value);
+  if (qty>2) {
+    document.getElementById('error').style.display = 'block';
+  }
+}
+function closeError() {
+  document.getElementById('error').style.display = 'none';
 }
 

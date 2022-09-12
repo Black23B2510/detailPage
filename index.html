@@ -135,7 +135,7 @@
                             </div>
 
                             <div class="main-products__qty">
-                                <label for="qty">Quantity</label>
+                                <p>Quantity</p>
                                 <div class="main-products__qty--numbers">
                                     <input onclick="minusQuantity('0')" type="button" value="-" min="" id="btn-incre" name="btn-incre" class="btn-incre">
                                     <input type="text" value="01" name="qty" id="qty" class="qty" min="01">
@@ -145,7 +145,17 @@
 
                             <div class="main-products__btnGroup">
                                 <button class="btn-add">Add to cart</button>
-                                <button class="btn-order">Order now</button>
+                                <button onclick="limitedAmount()" class="btn-order">Order now</button>
+                            </div>
+
+                            <div id="error" class="error" >
+                                <div class="error__container">
+                                    <h1 class="error__container--title">Exceeding the amount</h1>
+                                    <p class="error__container--mess">The maximum quantity of <span>XOR Titanium</span> products that can be purchased is
+                                        <span>2</span> products/order.
+                                    </p>
+                                    <button onclick="closeError()" class="error__container--btn"><span>Agree</span></button>
+                                </div>
                             </div>
 
                             <div class="main-products__filterDesc">

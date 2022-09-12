@@ -169,6 +169,9 @@ main{
                         & .swiper-slide{
                             padding: 10px;
                             opacity: 0.7;
+                            &:hover{
+                                border: 1px solid #A5A5A5;
+                            }
                             img{
                                 display: block;
                                 width: 100%;
@@ -232,6 +235,76 @@ main{
                 max-width: 485px;
                 // width: 33.681vw;
                 padding: 50px 0 86px 0;
+                .error{
+                    max-width: 586px;
+                    display: none;
+                    max-height: 253px;
+                    width: 40.694vw;
+                    height: 17.569vw;
+                    position: fixed;
+                    left: 50%;
+                    margin-left: -150px;
+                    top: 50%;
+                    margin-top: -100px;
+                    &__container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap: 32px;
+                        padding: 32px;
+                        z-index: 9999;
+                        background-color: $ft-txt;
+                        &--title{
+                            font-family: $ff-roboto;
+                            font-weight: var( --fw-title);
+                            font-size: var(--fz-main);
+                            line-height: var(--lh-title);
+                            text-align: center;
+                            letter-spacing: var(--lt-2);
+                            color: #001A31;
+                        }
+                        &--mess{
+                            font-family: $ff-poppins;
+                            font-weight: var(--fw-main);
+                            font-size: var( --fz-filter);
+                            line-height: 150%;
+                            text-align: center;
+                            color: #001A31;
+                            span{
+                                font-weight: var(--fw-title);
+                            }
+                        }
+                        &--btn{
+                            max-width: 522px;
+                            width: 36.250vw;
+                            max-height: 48px;
+                            height: 3.333vw;
+                            background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
+                            border-radius: 30px;
+                            span{
+                                font-family: $ff-poppins;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 21px;
+                                text-align: center;
+                                letter-spacing: 0.05em;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                    &::after{
+                        position: fixed;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        background: #000000;
+                        opacity: 0.5;
+                        z-index: -1;
+                    }
+                }
             }
             &__name{
                 margin-bottom: 16px;
@@ -307,7 +380,7 @@ main{
                 align-items: center;
                 margin-top: 61px;
                 margin-bottom: 16px;
-                label{
+                p{
                     margin-right: 38px;
                     font-family: $ff-poppins;
                     font-weight: var(--fw-main);
@@ -317,14 +390,15 @@ main{
                     color: #000000;
                 }
                 &--numbers{
-                    border: 1px solid #F2F2F2;
+                    display: flex;
+                    width: 134px;
+                    text-align: center;
+                    align-items: center;
+                    background: #ffffff;
+                    border: 1px solid #f2f2f2;
                     border-radius: 24px;
-                    background: #FFFFFF;
                     .btn-incre{
-                        width: 10px;
-                        height: 21px;
                         padding: 13px 14px 14px 20px;
-                        float: left;
                         border: none;
                         font-family: $ff-poppins;
                         font-weight: var(--fw-nav);
@@ -338,9 +412,6 @@ main{
                     }
                     .btn-decre{
                         padding: 13px 20px 14px 14px;
-                        width: 11px;
-                        height: 21px;
-                        float: left;
                         border: none;
                         font-family: $ff-poppins;
                         font-weight: var(--fw-nav);
@@ -355,8 +426,6 @@ main{
                     .qty{
                         width: 39px;
                         height: 21px;
-                        margin: 13px 0 14px 0;
-                        float: left;
                         border: none;
                         outline: none;
                         font-family: $ff-poppins;

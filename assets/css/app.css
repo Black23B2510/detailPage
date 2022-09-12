@@ -8,6 +8,20 @@
   box-sizing: border-box;
 }
 
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   box-sizing: border-box;
@@ -314,6 +328,9 @@ main .main__wrapper .main-products__slider .swiper.mySwiper .swiper-slide {
   padding: 10px;
   opacity: 0.7;
 }
+main .main__wrapper .main-products__slider .swiper.mySwiper .swiper-slide:hover {
+  border: 1px solid #A5A5A5;
+}
 main .main__wrapper .main-products__slider .swiper.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
@@ -371,6 +388,76 @@ main .main__wrapper .main-products__slider .swiper-button-next:hover {
 main .main__wrapper .main-products__desc {
   max-width: 485px;
   padding: 50px 0 86px 0;
+}
+main .main__wrapper .main-products__desc .error {
+  max-width: 586px;
+  display: none;
+  max-height: 253px;
+  width: 40.694vw;
+  height: 17.569vw;
+  position: fixed;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -100px;
+}
+main .main__wrapper .main-products__desc .error__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  z-index: 9999;
+  background-color: #FFFFFF;
+}
+main .main__wrapper .main-products__desc .error__container--title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: var(--fw-title);
+  font-size: var(--fz-main);
+  line-height: var(--lh-title);
+  text-align: center;
+  letter-spacing: var(--lt-2);
+  color: #001A31;
+}
+main .main__wrapper .main-products__desc .error__container--mess {
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--fw-main);
+  font-size: var(--fz-filter);
+  line-height: 150%;
+  text-align: center;
+  color: #001A31;
+}
+main .main__wrapper .main-products__desc .error__container--mess span {
+  font-weight: var(--fw-title);
+}
+main .main__wrapper .main-products__desc .error__container--btn {
+  max-width: 522px;
+  width: 36.25vw;
+  max-height: 48px;
+  height: 3.333vw;
+  background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
+  border-radius: 30px;
+}
+main .main__wrapper .main-products__desc .error__container--btn span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+main .main__wrapper .main-products__desc .error::after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000000;
+  opacity: 0.5;
+  z-index: -1;
 }
 main .main__wrapper .main-products__name {
   margin-bottom: 16px;
@@ -446,7 +533,7 @@ main .main__wrapper .main-products__qty {
   margin-top: 61px;
   margin-bottom: 16px;
 }
-main .main__wrapper .main-products__qty label {
+main .main__wrapper .main-products__qty p {
   margin-right: 38px;
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw-main);
@@ -456,15 +543,16 @@ main .main__wrapper .main-products__qty label {
   color: #000000;
 }
 main .main__wrapper .main-products__qty--numbers {
-  border: 1px solid #F2F2F2;
+  display: flex;
+  width: 134px;
+  text-align: center;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
   border-radius: 24px;
-  background: #FFFFFF;
 }
 main .main__wrapper .main-products__qty--numbers .btn-incre {
-  width: 10px;
-  height: 21px;
   padding: 13px 14px 14px 20px;
-  float: left;
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw-nav);
@@ -478,9 +566,6 @@ main .main__wrapper .main-products__qty--numbers .btn-incre {
 }
 main .main__wrapper .main-products__qty--numbers .btn-decre {
   padding: 13px 20px 14px 14px;
-  width: 11px;
-  height: 21px;
-  float: left;
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw-nav);
@@ -495,8 +580,6 @@ main .main__wrapper .main-products__qty--numbers .btn-decre {
 main .main__wrapper .main-products__qty--numbers .qty {
   width: 39px;
   height: 21px;
-  margin: 13px 0 14px 0;
-  float: left;
   border: none;
   outline: none;
   font-family: "Poppins", sans-serif;
@@ -1053,21 +1136,6 @@ footer .ft-nav__copyright p {
   }
   main .main__wrapper .main-products__filterDesc {
     margin-top: 30px;
-  }
-  main .main__wrapper .main-products__qty--numbers .btn-incre {
-    width: 8px;
-    height: 17px;
-    padding: 7px 8px 8px 10px;
-  }
-  main .main__wrapper .main-products__qty--numbers .btn-decre {
-    width: 9px;
-    height: 17px;
-    padding: 7px 20px 8px 8px;
-  }
-  main .main__wrapper .main-products__qty--numbers .qty {
-    width: 28px;
-    height: 17px;
-    margin: 7px 0 8px 0;
   }
   footer .ft-nav__bar {
     padding: 0 0 45px 0;
